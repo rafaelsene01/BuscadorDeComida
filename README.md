@@ -1,5 +1,7 @@
 # BuscadorDeComida
 
+Este projeto busca produtos para preços assim como Buscapé ou Zoom, porém focado em mercados online.
+
 ### Installation
 
 ```bash
