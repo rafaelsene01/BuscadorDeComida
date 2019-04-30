@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-const filtro = require('../filtros/filtro_domuscatore')
+const filtro = require('../filtros/filtro_seumercadoonline')
 
 exports.alimento = async (nome_alimento) => {
 
@@ -7,8 +7,8 @@ exports.alimento = async (nome_alimento) => {
 
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto('https://domuscatore.com/');
-    await page.type('html body #wrapper #header div #wide-nav div div ul li div div form.searchform div.flex-row.relative div.flex-col.flex-grow input.search-field.mb-0', nome_alimento);
+    await page.goto('https://seumercadoonline.com/');
+    await page.type('html body #wrapper #header div div div form.busca input#q.input-busca.form-control.ui-autocomplete-input.parsley-validated', nome_alimento);
     await page.keyboard.press('Enter');
     await page.waitForNavigation();
     await page.content().then(html => {
