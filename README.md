@@ -3,7 +3,7 @@
 ### Installation
 
 ```bash
-npm i cheerio
+npm install
 
-npm i puppeteer
+# to install => puppeteer, cheerio and express.
 ```
