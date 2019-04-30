@@ -1,0 +1,27 @@
+{
+  "name": "BuscadorDeComida",
+  "version": "1.0.0",
+  "description": "```bash\r npm i cheerio",
+  "main": "index.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.16.4",
+    "puppeteer": "^1.15.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelsene01/BuscadorDeComida.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelsene01/BuscadorDeComida/issues"
+  },
+  "homepage": "https://github.com/rafaelsene01/BuscadorDeComida#readme"
+}
