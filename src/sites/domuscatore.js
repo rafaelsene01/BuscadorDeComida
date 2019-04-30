@@ -5,7 +5,7 @@ exports.alimento = async (nome_alimento) => {
 
     let lista_alimento = [];
 
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
     const page = await browser.newPage();
     await page.goto('https://domuscatore.com/');
     await page.type('html body #wrapper #header div #wide-nav div div ul li div div form.searchform div.flex-row.relative div.flex-col.flex-grow input.search-field.mb-0', nome_alimento);

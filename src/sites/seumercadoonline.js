@@ -5,7 +5,7 @@ exports.alimento = async (nome_alimento) => {
 
     let lista_alimento = [];
 
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
     const page = await browser.newPage();
     await page.goto('https://seumercadoonline.com/');
     await page.type('html body #wrapper #header div div div form.busca input#q.input-busca.form-control.ui-autocomplete-input.parsley-validated', nome_alimento);
