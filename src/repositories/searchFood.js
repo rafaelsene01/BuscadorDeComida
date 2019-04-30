@@ -5,17 +5,15 @@ const seumercadoonline = require('../sites/seumercadoonline');
 
 exports.get = async (nome_limento) => {
 
-    //let lista_alimentos = [];
+    let lista_alimentos = [];
 
     await Promise.all([domuscatore.alimento(nome_limento), seumercadoonline.alimento(nome_limento)]).then(function (resposta) {
-        return resposta;
-        /*
         resposta.forEach(element => {
             element.forEach(alimento => {
                 lista_alimentos.push(alimento);
             })
-        });*/
+        });
     });
 
-    //return lista_alimentos;
+    return lista_alimentos;
 }
