@@ -14,6 +14,7 @@ app.use('/search', search);
 
 // Habilita o CORS/*
 app.use(cors());
+app.options('*', cors())
 /*
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
