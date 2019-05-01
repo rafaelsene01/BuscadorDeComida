@@ -22,14 +22,14 @@ exports.alimento = async (html) => {
         });
     $('html body div#wrapper main#main div div div.products.row.row-small.large-columns-5.medium-columns-3.small-columns-2.has-equal-box-heights.equalize-box ' +
         'div.product-small.col.has-hover div.col-inner div.product-small.box div.box-text.box-text-products div.price-wrapper span.price span.woocommerce-Price-amount.amount').each((i, el) => {
-            valorAlimento.push($(el).text().replace('R$', '').trim());
+            valorAlimento.push($(el).text().replace('R$', '').replace(',', ".").trim());
         });
     let alimento = [];
     for (let i = 0; i < urllinkAlimento.length; i++) {
         alimento.push({
             nome: nomeAlimento[i],
             img: urlImgAlimento[i],
-            valor: valorAlimento[i],
+            valor: Number(valorAlimento[i]),
             link: urllinkAlimento[i],
             site: 'domuscatore'
         })
