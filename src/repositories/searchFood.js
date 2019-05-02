@@ -9,7 +9,7 @@ exports.get = async (nome_limento) => {
 
     let lista_alimentos = [];
 
-    await Promise.all([apoioentrega.alimento(nome_limento)]).then(function (resposta) {
+    await Promise.all([praticosupermercado.alimento(nome_limento)]).then(function (resposta) {
         resposta.forEach(element => {
             element.forEach(alimento => {
                 lista_alimentos.push(alimento);
