@@ -22,13 +22,14 @@ exports.alimento = async (html) => {
     });
     let alimento = [];
     for (let i = 0; i < urllinkAlimento.length; i++) {
-        alimento.push({
-            nome: nomeAlimento[i],
-            img: urlImgAlimento[i],
-            valor: Number(valorAlimento[i]),
-            link: urllinkAlimento[i],
-            site: 'seumercadoonline'
-        })
+        if (nomeAlimento[i] != null && urlImgAlimento[i] != null && valorAlimento[i] != null && urllinkAlimento[i] != null)
+            alimento.push({
+                nome: nomeAlimento[i],
+                img: urlImgAlimento[i],
+                valor: Number(valorAlimento[i]),
+                link: urllinkAlimento[i],
+                site: 'seumercadoonline'
+            });
     }
 
     return alimento;
