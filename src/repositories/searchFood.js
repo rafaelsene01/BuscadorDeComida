@@ -2,8 +2,8 @@
 
 const domuscatore = require('../sites/domuscatore');
 const seumercadoonline = require('../sites/seumercadoonline');
-const praticosupermercado = require('./sites/praticosupermercado');
-const apoioentrega = require('./sites/apoioentrega');
+const praticosupermercado = require('../sites/praticosupermercado');
+const apoioentrega = require('../sites/apoioentrega');
 
 exports.get = async (nome_limento) => {
 
