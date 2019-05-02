@@ -5,7 +5,7 @@ exports.alimento = async (nome_alimento) => {
 
     let lista_alimento = [];
 
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
     const page = await browser.newPage();
     await page.goto('https://www.apoioentrega.com/');
     await page.type('#nm-custom-autocomplete', nome_alimento);
