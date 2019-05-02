@@ -14,7 +14,9 @@ exports.get = async (nome_limento) => {
             element.forEach(alimento => {
                 lista_alimentos.push(alimento);
             })
-        });
+        }).catch(err => {
+            return err;
+        });;
     });
 
     return lista_alimentos;
